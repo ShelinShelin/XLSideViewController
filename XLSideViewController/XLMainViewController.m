@@ -8,6 +8,7 @@
 
 #import "XLMainViewController.h"
 #import "XLSideViewController.h"
+
 @interface XLMainViewController ()
 
 @end
@@ -18,7 +19,6 @@
     if ([super init]) {
         self = [[NSBundle mainBundle] loadNibNamed:@"XLMainViewController" owner:nil options:nil].lastObject;
     }
-    
     return self;
 }
 
@@ -29,9 +29,15 @@
 }
 
 - (void)sideViewShowOrHiden {
-    NSLog(@"sideViewShowOrHiden");
-//    [XLSideViewController showSideView];
-    [XLSideViewController hidenSideView];
+    
+    XLSideViewController *sideViewController = (XLSideViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    if (sideViewController.sideViewStatus == SideViewStatusHiden) {
+        [XLSideViewController showSideView];
+        sideViewController.sideViewStatus = SideViewStatusShow;
+    }else {
+        [XLSideViewController hidenSideView];
+        sideViewController.sideViewStatus = SideViewStatusHiden;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -24,6 +24,7 @@ static UIView *_leftView;
 @interface XLSideViewController ()
 {
     UIPanGestureRecognizer *_panGestureRecognizer;
+    CGFloat _moveDistance;
 }
 @end
 
@@ -37,6 +38,7 @@ static UIView *_leftView;
         kDefaultHeightZoomScale = kScreenHeight * (kDefaultHeightZoomScale / kIphone6PlusHeight);
         kDefaultMoveDistance = kScreenWidth * (kDefaultMoveDistance / kIphone6PlusWidth);
         [self setSpringBack:YES];
+        [self setSideViewStatus:SideViewStatusHiden];
         _mainView = mainViewController.view;
         _leftView = leftViewController.view;
         _moveDistance = kDefaultMoveDistance;
@@ -93,6 +95,12 @@ static UIView *_leftView;
     }
 }
 
+- (void)setSideViewStatus:(XLSideViewStatus)sideViewStatus {
+    if (_sideViewStatus != sideViewStatus) {
+        _sideViewStatus = sideViewStatus;
+    }
+}
+
 #pragma mark - pan
 
 - (void)pan:(UIPanGestureRecognizer*)panGesture {
@@ -103,12 +111,11 @@ static UIView *_leftView;
     __block CGRect tempFrame = _mainView.frame;
     tempFrame.origin.x += detalX;
     tempFrame.origin.x = tempFrame.origin.x >= 0 ? tempFrame.origin.x : 0;
-    tempFrame.origin.x = tempFrame.origin.x <= self.moveDistance ? tempFrame.origin.x : self.moveDistance;
+    tempFrame.origin.x = tempFrame.origin.x <= _moveDistance ? tempFrame.origin.x : _moveDistance;
     tempFrame.size.height = kScreenHeight - ((kScreenHeight - kDefaultHeightZoomScale) * tempFrame.origin.x / kDefaultMoveDistance);
     tempFrame.origin.y = (kScreenHeight - tempFrame.size.height) / 2;
     
     if (panGesture.state == UIGestureRecognizerStateEnded) {
-    
         if (self.isSpringBack) {
             if (tempFrame.origin.x < kDefaultMoveDistance / 2) {
                 [UIView animateWithDuration:kAnimateDuration animations:^{
@@ -117,13 +124,16 @@ static UIView *_leftView;
                     tempFrame.size.height = kScreenHeight;
                     _mainView.frame = tempFrame;
                 }];
+                [self setSideViewStatus:SideViewStatusHiden];
             } else {
                 [UIView animateWithDuration:kAnimateDuration animations:^{
                     tempFrame.origin.x = kDefaultMoveDistance;
                     tempFrame.origin.y = (kScreenHeight - kDefaultHeightZoomScale) / 2;
                     tempFrame.size.height = kDefaultHeightZoomScale;
                     _mainView.frame = tempFrame;
+                    
                 }];
+                [self setSideViewStatus:SideViewStatusShow];
             }
         } else {
             if (velocityX > 0) {
@@ -133,6 +143,7 @@ static UIView *_leftView;
                     tempFrame.size.height = kDefaultHeightZoomScale;
                     _mainView.frame = tempFrame;
                 }];
+                [self setSideViewStatus:SideViewStatusShow];
             } else {
                 [UIView animateWithDuration:kAnimateDuration animations:^{
                     tempFrame.origin.x = 0;
@@ -140,6 +151,7 @@ static UIView *_leftView;
                     tempFrame.size.height = kScreenHeight;
                     _mainView.frame = tempFrame;
                 }];
+                [self setSideViewStatus:SideViewStatusHiden];
             }
         }
     }
