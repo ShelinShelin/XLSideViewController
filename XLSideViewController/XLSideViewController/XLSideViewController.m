@@ -13,16 +13,17 @@
 
 static CGFloat const kIphone6PlusHeight = 667.0f;
 static CGFloat const kIphone6PlusWidth = 414.0f;
-static NSTimeInterval const kAnimateDuration = 0.3f;
+static CGFloat const kAnimateDuration = 0.3f;
 
 static CGFloat kDefaultHeightZoomScale = 500.0f;
 static CGFloat kDefaultMoveDistance = 300.0f;
 
+static UIView *_mainView;
+static UIView *_leftView;
+
 @interface XLSideViewController ()
 {
     UIPanGestureRecognizer *_panGestureRecognizer;
-    UIView *_mainView;
-    UIView *_leftView;
 }
 @end
 
@@ -49,13 +50,24 @@ static CGFloat kDefaultMoveDistance = 300.0f;
 }
 
 + (void)showSideView {
-    
+    __block CGRect tempFrame = _mainView.frame;
+    [UIView animateWithDuration:kAnimateDuration animations:^{
+        tempFrame.origin.x = kDefaultMoveDistance;
+        tempFrame.origin.y = (kScreenHeight - kDefaultHeightZoomScale) / 2;
+        tempFrame.size.height = kDefaultHeightZoomScale;
+        _mainView.frame = tempFrame;
+    }];
 }
 
 + (void)hidenSideView {
-    
+    __block CGRect tempFrame = _mainView.frame;
+    [UIView animateWithDuration:kAnimateDuration animations:^{
+        tempFrame.origin.x = 0;
+        tempFrame.origin.y = 0;
+        tempFrame.size.height = kScreenHeight;
+        _mainView.frame = tempFrame;
+    }];
 }
-
 
 #pragma mark - setter
 

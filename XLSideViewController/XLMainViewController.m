@@ -7,7 +7,7 @@
 //
 
 #import "XLMainViewController.h"
-
+#import "XLSideViewController.h"
 @interface XLMainViewController ()
 
 @end
@@ -25,6 +25,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"active_h"] style:UIBarButtonItemStylePlain target:self action:@selector(sideViewShowOrHiden)];
+}
+
+- (void)sideViewShowOrHiden {
+    NSLog(@"sideViewShowOrHiden");
+//    [XLSideViewController showSideView];
+    [XLSideViewController hidenSideView];
 }
 
 - (void)didReceiveMemoryWarning {

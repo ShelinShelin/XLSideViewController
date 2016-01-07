@@ -20,6 +20,7 @@
 		FD6AC6221C3CB210006A9A51 /* XLLeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD6AC6201C3CB210006A9A51 /* XLLeftViewController.xib */; };
 		FD6AC6261C3CB21F006A9A51 /* XLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6AC6241C3CB21F006A9A51 /* XLMainViewController.m */; };
 		FD6AC6271C3CB21F006A9A51 /* XLMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD6AC6251C3CB21F006A9A51 /* XLMainViewController.xib */; };
+		FDC3EB5E1C3E7126001E18D2 /* active_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC3EB5D1C3E7126001E18D2 /* active_h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		FD6AC6231C3CB21F006A9A51 /* XLMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLMainViewController.h; sourceTree = "<group>"; };
 		FD6AC6241C3CB21F006A9A51 /* XLMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLMainViewController.m; sourceTree = "<group>"; };
 		FD6AC6251C3CB21F006A9A51 /* XLMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLMainViewController.xib; sourceTree = "<group>"; };
+		FDC3EB5D1C3E7126001E18D2 /* active_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "active_h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		FD6AC5E61C3CAF9E006A9A51 /* XLSideViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FDC3EB5D1C3E7126001E18D2 /* active_h@2x.png */,
 				FD6AC61A1C3CAFC1006A9A51 /* XLSideViewController */,
 				FD6AC5EA1C3CAF9E006A9A51 /* AppDelegate.h */,
 				FD6AC5EB1C3CAF9E006A9A51 /* AppDelegate.m */,
@@ -280,6 +283,7 @@
 				FD6AC5F41C3CAF9E006A9A51 /* Assets.xcassets in Resources */,
 				FD6AC5F21C3CAF9E006A9A51 /* Main.storyboard in Resources */,
 				FD6AC6221C3CB210006A9A51 /* XLLeftViewController.xib in Resources */,
+				FDC3EB5E1C3E7126001E18D2 /* active_h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +537,7 @@
 				FD6AC6131C3CAF9E006A9A51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD6AC6141C3CAF9E006A9A51 /* Build configuration list for PBXNativeTarget "XLSideViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +546,7 @@
 				FD6AC6161C3CAF9E006A9A51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD6AC6171C3CAF9E006A9A51 /* Build configuration list for PBXNativeTarget "XLSideViewControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -549,6 +555,7 @@
 				FD6AC6191C3CAF9E006A9A51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
