@@ -1,7 +1,7 @@
 //
 //  AppDelegate.m
 //  XLSideViewController
-//
+//  https://github.com/ShelinShelin
 //  Created by Shelin on 16/1/6.
 //  Copyright © 2016年 GreatGate. All rights reserved.
 //
@@ -27,7 +27,7 @@
     XLLeftViewController *leftViewController = [[XLLeftViewController alloc] init];
     
     XLSideViewController *sideViewController = [[XLSideViewController alloc] initWithMainViewController:navigationController leftViewController:leftViewController];
-    
+    sideViewController.springBack = NO;
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = sideViewController;

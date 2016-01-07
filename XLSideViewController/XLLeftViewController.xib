@@ -12,16 +12,22 @@
                 <viewControllerLayoutGuide type="top" id="fhy-eV-C7h"/>
                 <viewControllerLayoutGuide type="bottom" id="XpN-13-uSm"/>
             </layoutGuides>
-            <view key="view" contentMode="scaleToFill" id="Uhc-9n-Gm6">
+            <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="Uhc-9n-Gm6">
                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m6D-tp-qs7">
                         <rect key="frame" x="56" y="301" width="51" height="31"/>
-                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </switch>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="722-VF-qrq">
+                        <rect key="frame" x="70" y="377" width="20" height="20"/>
+                    </activityIndicatorView>
+                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XnO-iw-y5h">
+                        <rect key="frame" x="45" y="450" width="94" height="29"/>
+                    </stepper>
                 </subviews>
-                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
             </view>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <point key="canvasLocation" x="227" y="214"/>
