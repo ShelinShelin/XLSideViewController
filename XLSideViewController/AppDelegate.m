@@ -20,6 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
     
     XLMainViewController *mainViewController = [[XLMainViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainViewController];
@@ -27,13 +29,8 @@
     XLLeftViewController *leftViewController = [[XLLeftViewController alloc] init];
     
     XLSideViewController *sideViewController = [[XLSideViewController alloc] initWithMainViewController:navigationController leftViewController:leftViewController];
-    sideViewController.springBack = NO;
-    
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
     self.window.rootViewController = sideViewController;
-    [self.window makeKeyAndVisible];
-    
-    
     return YES;
 }
 

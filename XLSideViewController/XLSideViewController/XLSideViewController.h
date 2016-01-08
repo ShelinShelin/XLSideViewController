@@ -9,22 +9,20 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, XLSideViewStatus) {
-    //以下是枚举成员
-    SideViewStatusHiden = 0,
-    SideViewStatusShow = 1
+    SideViewStatusHiden = 0,    //status hiden
+    SideViewStatusShow = 1      //status show
 };
 
 @interface XLSideViewController : UIViewController
 
 @property (nonatomic, strong) UIViewController *leftViewController;
 @property (nonatomic, strong) UIViewController *mainViewController;
-@property (nonatomic, assign, getter=isSpringBack) BOOL springBack;      //  default is YES
 @property (nonatomic, assign) XLSideViewStatus sideViewStatus;
 
 - (instancetype)initWithMainViewController:(UIViewController *)mainViewController leftViewController:(UIViewController *)leftViewController;
 
-+ (void)showSideView;
+- (void)showSideView;
 
-+ (void)hidenSideView;
+- (void)hidenSideView;
 
 @end

@@ -15,28 +15,20 @@
 
 @implementation XLMainViewController
 
-- (instancetype)init {
-    if ([super init]) {
-        self = [[NSBundle mainBundle] loadNibNamed:@"XLMainViewController" owner:nil options:nil].lastObject;
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"active_h"] style:UIBarButtonItemStylePlain target:self action:@selector(sideViewShowOrHiden)];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_caidan_topbar"] style:UIBarButtonItemStylePlain target:self action:@selector(sideViewShowOrHiden)];
 }
 
 - (void)sideViewShowOrHiden {
     
     XLSideViewController *sideViewController = (XLSideViewController *)[UIApplication sharedApplication].keyWindow.rootViewController;
     if (sideViewController.sideViewStatus == SideViewStatusHiden) {
-        [XLSideViewController showSideView];
-        sideViewController.sideViewStatus = SideViewStatusShow;
+        [sideViewController showSideView];
     }else {
-        [XLSideViewController hidenSideView];
-        sideViewController.sideViewStatus = SideViewStatusHiden;
+        [sideViewController hidenSideView];
     }
 }
 
@@ -44,6 +36,14 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (instancetype)init {
+    if ([super init]) {
+        self = [[NSBundle mainBundle] loadNibNamed:@"XLMainViewController" owner:nil options:nil].lastObject;
+    }
+    return self;
+}
+
 
 /*
 #pragma mark - Navigation

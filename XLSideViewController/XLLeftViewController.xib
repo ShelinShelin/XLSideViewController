@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XLLeftViewController"/>
@@ -16,21 +17,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m6D-tp-qs7">
-                        <rect key="frame" x="56" y="301" width="51" height="31"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </switch>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="722-VF-qrq">
-                        <rect key="frame" x="70" y="377" width="20" height="20"/>
-                    </activityIndicatorView>
-                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XnO-iw-y5h">
-                        <rect key="frame" x="45" y="450" width="94" height="29"/>
-                    </stepper>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FullSizeRender.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fPS-9v-vCU">
+                        <rect key="frame" x="45" y="62" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="T71-PM-aXA"/>
+                            <constraint firstAttribute="height" constant="100" id="t0q-r9-Hgp"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://github.com/ShelinShelin" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dQ-Gr-ddc">
+                        <rect key="frame" x="20" y="186" width="163" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="163" id="Nqz-F7-5VQ"/>
+                            <constraint firstAttribute="height" constant="64" id="jCP-cX-R3C"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
-                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="fPS-9v-vCU" firstAttribute="leading" secondItem="Uhc-9n-Gm6" secondAttribute="leadingMargin" constant="25" id="EWQ-Mb-3iY"/>
+                    <constraint firstItem="6dQ-Gr-ddc" firstAttribute="top" secondItem="fPS-9v-vCU" secondAttribute="bottom" constant="24" id="Kth-Tn-ZhM"/>
+                    <constraint firstItem="fPS-9v-vCU" firstAttribute="top" secondItem="fhy-eV-C7h" secondAttribute="bottom" constant="42" id="gbV-Dy-Dss"/>
+                    <constraint firstItem="6dQ-Gr-ddc" firstAttribute="leading" secondItem="Uhc-9n-Gm6" secondAttribute="leadingMargin" id="yrO-z3-2Bs"/>
+                </constraints>
             </view>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <point key="canvasLocation" x="227" y="214"/>
         </viewController>
     </objects>
+    <resources>
+        <image name="FullSizeRender.jpg" width="640" height="617"/>
+    </resources>
 </document>

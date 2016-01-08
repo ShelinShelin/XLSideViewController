@@ -21,6 +21,10 @@
 		FD6AC6261C3CB21F006A9A51 /* XLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6AC6241C3CB21F006A9A51 /* XLMainViewController.m */; };
 		FD6AC6271C3CB21F006A9A51 /* XLMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD6AC6251C3CB21F006A9A51 /* XLMainViewController.xib */; };
 		FDC3EB5E1C3E7126001E18D2 /* active_h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC3EB5D1C3E7126001E18D2 /* active_h@2x.png */; };
+		FDC3EB621C3F47FC001E18D2 /* btn_caidan_topbar.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC3EB5F1C3F47FC001E18D2 /* btn_caidan_topbar.png */; };
+		FDC3EB631C3F47FC001E18D2 /* btn_caidan_topbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC3EB601C3F47FC001E18D2 /* btn_caidan_topbar@2x.png */; };
+		FDC3EB641C3F47FC001E18D2 /* btn_caidan_topbar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FDC3EB611C3F47FC001E18D2 /* btn_caidan_topbar@3x.png */; };
+		FDC3EB7C1C3F6416001E18D2 /* FullSizeRender.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FDC3EB7B1C3F6416001E18D2 /* FullSizeRender.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +69,11 @@
 		FD6AC6231C3CB21F006A9A51 /* XLMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLMainViewController.h; sourceTree = "<group>"; };
 		FD6AC6241C3CB21F006A9A51 /* XLMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLMainViewController.m; sourceTree = "<group>"; };
 		FD6AC6251C3CB21F006A9A51 /* XLMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLMainViewController.xib; sourceTree = "<group>"; };
-		FDC3EB5D1C3E7126001E18D2 /* active_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "active_h@2x.png"; sourceTree = "<group>"; };
+		FDC3EB5D1C3E7126001E18D2 /* active_h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "active_h@2x.png"; path = "../active_h@2x.png"; sourceTree = "<group>"; };
+		FDC3EB5F1C3F47FC001E18D2 /* btn_caidan_topbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_caidan_topbar.png; path = ../btn_caidan_topbar.png; sourceTree = "<group>"; };
+		FDC3EB601C3F47FC001E18D2 /* btn_caidan_topbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_caidan_topbar@2x.png"; path = "../btn_caidan_topbar@2x.png"; sourceTree = "<group>"; };
+		FDC3EB611C3F47FC001E18D2 /* btn_caidan_topbar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "btn_caidan_topbar@3x.png"; path = "../btn_caidan_topbar@3x.png"; sourceTree = "<group>"; };
+		FDC3EB7B1C3F6416001E18D2 /* FullSizeRender.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FullSizeRender.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +124,7 @@
 		FD6AC5E61C3CAF9E006A9A51 /* XLSideViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FDC3EB5D1C3E7126001E18D2 /* active_h@2x.png */,
+				FDC3EB651C3F4A16001E18D2 /* Images */,
 				FD6AC61A1C3CAFC1006A9A51 /* XLSideViewController */,
 				FD6AC5EA1C3CAF9E006A9A51 /* AppDelegate.h */,
 				FD6AC5EB1C3CAF9E006A9A51 /* AppDelegate.m */,
@@ -170,6 +178,18 @@
 				FD6AC61C1C3CAFDD006A9A51 /* XLSideViewController.m */,
 			);
 			path = XLSideViewController;
+			sourceTree = "<group>";
+		};
+		FDC3EB651C3F4A16001E18D2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FDC3EB5F1C3F47FC001E18D2 /* btn_caidan_topbar.png */,
+				FDC3EB601C3F47FC001E18D2 /* btn_caidan_topbar@2x.png */,
+				FDC3EB611C3F47FC001E18D2 /* btn_caidan_topbar@3x.png */,
+				FDC3EB5D1C3E7126001E18D2 /* active_h@2x.png */,
+				FDC3EB7B1C3F6416001E18D2 /* FullSizeRender.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,10 +300,14 @@
 			files = (
 				FD6AC5F71C3CAF9E006A9A51 /* LaunchScreen.storyboard in Resources */,
 				FD6AC6271C3CB21F006A9A51 /* XLMainViewController.xib in Resources */,
+				FDC3EB641C3F47FC001E18D2 /* btn_caidan_topbar@3x.png in Resources */,
 				FD6AC5F41C3CAF9E006A9A51 /* Assets.xcassets in Resources */,
 				FD6AC5F21C3CAF9E006A9A51 /* Main.storyboard in Resources */,
 				FD6AC6221C3CB210006A9A51 /* XLLeftViewController.xib in Resources */,
 				FDC3EB5E1C3E7126001E18D2 /* active_h@2x.png in Resources */,
+				FDC3EB621C3F47FC001E18D2 /* btn_caidan_topbar.png in Resources */,
+				FDC3EB631C3F47FC001E18D2 /* btn_caidan_topbar@2x.png in Resources */,
+				FDC3EB7C1C3F6416001E18D2 /* FullSizeRender.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
